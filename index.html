@@ -19,7 +19,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
@@ -97,113 +97,27 @@
             opacity: 0.9;
         }
 
-        .login-section, .upload-section {
+        .teacher-link {
             background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             margin-bottom: 30px;
+            text-align: center;
         }
 
-        .login-section {
-            max-width: 500px;
-            margin: 0 auto 30px;
-        }
-
-        .section-title {
-            font-size: 1.8em;
-            color: #333;
-            margin-bottom: 20px;
-            display: flex;
+        .teacher-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            display: inline-flex;
             align-items: center;
             gap: 10px;
         }
 
-        .admin-badge {
-            background: #10b981;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 0.9em;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            color: #333;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 1em;
-            transition: border 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        .upload-area {
-            border: 3px dashed #667eea;
-            border-radius: 10px;
-            padding: 40px;
-            text-align: center;
-            background: #f8f9ff;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .upload-area:hover {
-            background: #eef0ff;
-            border-color: #764ba2;
-        }
-
-        .btn {
-            width: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
-        }
-
-        .logout-btn {
-            background: #ef4444;
-            padding: 10px 20px;
-            width: auto;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .logout-btn:hover {
-            background: #dc2626;
+        .teacher-link a:hover {
+            color: #764ba2;
         }
 
         .search-bar {
@@ -236,7 +150,7 @@
         .category h2 {
             color: #667eea;
             margin-bottom: 20px;
-            font-size: 1.8em;
+            font-size: 1.5em;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -244,7 +158,7 @@
 
         .course-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 20px;
         }
 
@@ -252,7 +166,6 @@
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             padding: 20px;
             border-radius: 10px;
-            position: relative;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
@@ -267,7 +180,7 @@
         }
 
         .course-title {
-            font-size: 1.3em;
+            font-size: 1.2em;
             font-weight: 600;
             color: #333;
             margin-bottom: 8px;
@@ -293,37 +206,18 @@
         .download-btn {
             background: #667eea;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             display: inline-block;
             text-align: center;
             transition: background 0.3s;
+            width: 100%;
         }
 
         .download-btn:hover {
             background: #764ba2;
-        }
-
-        .delete-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #ff4757;
-            color: white;
-            border: none;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.3em;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .delete-btn:hover {
-            background: #ff3838;
         }
 
         .empty-state {
@@ -335,10 +229,6 @@
         .empty-state-icon {
             font-size: 5em;
             margin-bottom: 15px;
-        }
-
-        .hidden {
-            display: none;
         }
 
         @media (max-width: 768px) {
@@ -358,7 +248,7 @@
             <div class="header-top">
                 <div>
                     <h1>📚 <span id="siteTitle">Class 2025 Course Library</span></h1>
-                    <p id="siteSubtitle">Your one-stop resource hub for all course materials</p>
+                    <p id="siteSubtitle">Computer Science & Mathematics Resources</p>
                 </div>
                 <div class="language-selector">
                     <button class="lang-btn active" onclick="changeLanguage('en')">EN</button>
@@ -372,7 +262,7 @@
                     <div class="label" id="labelCourses">Total Courses</div>
                 </div>
                 <div class="stat-card">
-                    <div class="number">4</div>
+                    <div class="number">10</div>
                     <div class="label" id="labelCategories">Categories</div>
                 </div>
                 <div class="stat-card">
@@ -382,60 +272,11 @@
             </div>
         </header>
 
-        <!-- Login Section -->
-        <div class="login-section" id="loginSection">
-            <h2 class="section-title">🔒 <span id="adminLoginTitle">Admin Login</span></h2>
-            <div class="form-group">
-                <label id="passwordLabel">Password</label>
-                <input type="password" id="passwordInput" placeholder="Enter admin password">
-            </div>
-            <button class="btn" onclick="handleLogin()" id="loginBtn">Login</button>
-        </div>
-
-        <!-- Upload Section -->
-        <div class="upload-section hidden" id="uploadSection">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                <h2 class="section-title">⬆️ <span id="uploadTitle">Upload New Course Material</span></h2>
-                <button class="btn logout-btn" onclick="handleLogout()">
-                    🚪 <span id="logoutText">Logout</span>
-                </button>
-            </div>
-            
-            <div class="admin-badge">
-                🔓 <span id="adminModeText">Admin Mode</span>
-            </div>
-
-            <div class="form-group">
-                <label id="titleLabel">Course Title *</label>
-                <input type="text" id="courseTitle" placeholder="e.g., Advanced Mathematics">
-            </div>
-
-            <div class="form-group">
-                <label id="descLabel">Description</label>
-                <textarea id="courseDescription" rows="3" placeholder="Brief description..."></textarea>
-            </div>
-
-            <div class="form-group">
-                <label id="categoryLabel">Category *</label>
-                <select id="courseCategory">
-                    <option value="">Select a category</option>
-                    <option value="mathematics">📐 Mathematics</option>
-                    <option value="science">🔬 Science</option>
-                    <option value="languages">🗣️ Languages</option>
-                    <option value="other">📖 Other</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label id="fileLabel">PDF File *</label>
-                <div class="upload-area" onclick="document.getElementById('fileInput').click()">
-                    <div style="font-size: 4em; margin-bottom: 10px;">📄</div>
-                    <div id="fileName">Click to select PDF file</div>
-                    <input type="file" id="fileInput" accept=".pdf" style="display: none;">
-                </div>
-            </div>
-
-            <button class="btn" onclick="handleSubmit()" id="addCourseBtn">Add Course Material</button>
+        <!-- Teacher Instructions Link -->
+        <div class="teacher-link">
+            <a href="teacher-instructions.html" target="_blank">
+                👨‍🏫 <span id="teacherLink">Teacher Instructions - How to Add Courses</span>
+            </a>
         </div>
 
         <!-- Search Bar -->
@@ -445,278 +286,279 @@
 
         <!-- Courses Section -->
         <div class="category">
-            <h2>📐 <span id="mathTitle">Mathematics</span></h2>
-            <div class="course-grid" id="mathematics"></div>
+            <h2>💻 <span id="cat1">Atelier Programmation</span></h2>
+            <div class="course-grid" id="programmation"></div>
         </div>
 
         <div class="category">
-            <h2>🔬 <span id="scienceTitle">computer science</span></h2>
-            <div class="course-grid" id="science"></div>
+            <h2>🔧 <span id="cat2">Système Logique et Architecture</span></h2>
+            <div class="course-grid" id="systeme_logique"></div>
         </div>
 
         <div class="category">
-            <h2>🗣️ <span id="languagesTitle">Languages</span></h2>
-            <div class="course-grid" id="languages"></div>
+            <h2>📊 <span id="cat3">Algorithme et Structure de Données</span></h2>
+            <div class="course-grid" id="algorithme"></div>
         </div>
 
         <div class="category">
-            <h2>📖 <span id="otherTitle">Other</span></h2>
-            <div class="course-grid" id="other"></div>
+            <h2>🧠 <span id="cat4">Logique Formelle</span></h2>
+            <div class="course-grid" id="logique"></div>
+        </div>
+
+        <div class="category">
+            <h2>🎨 <span id="cat5">Technologies Multimédia</span></h2>
+            <div class="course-grid" id="multimedia"></div>
+        </div>
+
+        <div class="category">
+            <h2>📡 <span id="cat6">Technique de Communication</span></h2>
+            <div class="course-grid" id="communication"></div>
+        </div>
+
+        <div class="category">
+            <h2>📐 <span id="cat7">Analyse</span></h2>
+            <div class="course-grid" id="analyse"></div>
+        </div>
+
+        <div class="category">
+            <h2>🔢 <span id="cat8">Algèbre</span></h2>
+            <div class="course-grid" id="algebre"></div>
+        </div>
+
+        <div class="category">
+            <h2>⚙️ <span id="cat9">Système d'Exploitation</span></h2>
+            <div class="course-grid" id="systeme_exploitation"></div>
+        </div>
+
+        <div class="category">
+            <h2>🌍 <span id="cat10">Anglais</span></h2>
+            <div class="course-grid" id="anglais"></div>
         </div>
     </div>
 
-    <script src="translations.js"></script>
     <script>
-        const ADMIN_PASSWORD = 'admin2025';
-        let isAdmin = false;
-        let courses = {};
-        let downloadCount = 0;
-        let currentLanguage = 'en';
-        let selectedFile = null;
+        // ========================================
+        // 📚 COURSES DATABASE - EDIT THIS TO ADD/REMOVE COURSES
+        // ========================================
+        const courses = [
+            // PROGRAMMATION
+            {
+                title: "Introduction to Python",
+                description: "Basic Python programming concepts",
+                category: "programmation",
+                driveLink: "https://drive.google.com/file/d/1example1/view",
+                uploadDate: "2025-04-01"
+            },
 
-        // Translations object
+            // SYSTÈME LOGIQUE
+            {
+                title: "Digital Logic Design",
+                description: "Boolean algebra and logic gates",
+                category: "systeme_logique",
+                driveLink: "https://drive.google.com/file/d/1example2/view",
+                uploadDate: "2025-04-02"
+            },
+
+            // ALGORITHME
+            {
+                title: "Data Structures Basics",
+                description: "Arrays, lists, and trees",
+                category: "algorithme",
+                driveLink: "https://drive.google.com/file/d/1example3/view",
+                uploadDate: "2025-04-03"
+            },
+
+            // LOGIQUE FORMELLE
+            {
+                title: "Propositional Logic",
+                description: "Truth tables and logical operators",
+                category: "logique",
+                driveLink: "https://drive.google.com/file/d/1example4/view",
+                uploadDate: "2025-04-04"
+            },
+
+            // MULTIMEDIA
+            {
+                title: "Web Design Fundamentals",
+                description: "HTML, CSS, and responsive design",
+                category: "multimedia",
+                driveLink: "https://drive.google.com/file/d/1example5/view",
+                uploadDate: "2025-04-05"
+            },
+
+            // COMMUNICATION
+            {
+                title: "Network Protocols",
+                description: "TCP/IP and OSI model",
+                category: "communication",
+                driveLink: "https://drive.google.com/file/d/1example6/view",
+                uploadDate: "2025-04-06"
+            },
+
+            // ANALYSE
+            {
+                title: "Calculus I",
+                description: "Limits, derivatives, and integrals",
+                category: "analyse",
+                driveLink: "https://drive.google.com/file/d/1example7/view",
+                uploadDate: "2025-04-07"
+            },
+
+            // ALGÈBRE
+            {
+                title: "Linear Algebra",
+                description: "Matrices and vector spaces",
+                category: "algebre",
+                driveLink: "https://drive.google.com/file/d/1example8/view",
+                uploadDate: "2025-04-08"
+            },
+
+            // SYSTÈME D'EXPLOITATION
+            {
+                title: "Operating Systems Concepts",
+                description: "Processes, threads, and memory management",
+                category: "systeme_exploitation",
+                driveLink: "https://drive.google.com/file/d/1example9/view",
+                uploadDate: "2025-04-09"
+            },
+
+            // ANGLAIS
+            {
+                title: "Technical English",
+                description: "English for computer science students",
+                category: "anglais",
+                driveLink: "https://drive.google.com/file/d/1example10/view",
+                uploadDate: "2025-04-10"
+            }
+        ];
+        // ========================================
+        // END OF COURSES DATABASE
+        // ========================================
+
+        // Translations
         const translations = {
             en: {
                 siteTitle: "Class 2025 Course Library",
-                siteSubtitle: "Your one-stop resource hub for all course materials",
                 totalCourses: "Total Courses",
                 categories: "Categories",
                 totalDownloads: "Downloads",
-                adminLogin: "Admin Login",
-                password: "Password",
-                login: "Login",
-                logout: "Logout",
-                uploadNew: "Upload New Course Material",
-                courseTitle: "Course Title",
-                description: "Description",
-                category: "Category",
-                selectCategory: "Select a category",
-                mathematics: "Mathematics",
-                science: "Science",
-                languages: "Languages",
-                other: "Other",
-                pdfFile: "PDF File",
-                clickToSelect: "Click to select PDF file",
-                addCourse: "Add Course Material",
+                teacherLink: "Teacher Instructions - How to Add Courses",
                 searchPlaceholder: "🔍 Search courses...",
                 noCoursesYet: "No courses yet in this category",
-                uploadDate: "Upload Date",
-                downloadBtn: "Download",
-                deleteConfirm: "Are you sure you want to delete this course?",
-                courseAdded: "Course material added successfully!",
-                selectFile: "Please select a PDF file",
-                wrongPassword: "Wrong password! Please try again.",
-                adminMode: "Admin Mode"
+                uploadDate: "Uploaded",
+                downloadBtn: "📥 Download PDF",
+                cat1: "Programming Workshop",
+                cat2: "Logic Systems & Computer Architecture",
+                cat3: "Algorithms & Data Structures",
+                cat4: "Formal Logic",
+                cat5: "Multimedia Technologies",
+                cat6: "Communication Techniques",
+                cat7: "Analysis",
+                cat8: "Algebra",
+                cat9: "Operating Systems",
+                cat10: "English"
             },
             fr: {
                 siteTitle: "Bibliothèque de Cours Classe 2025",
-                siteSubtitle: "Votre hub de ressources unique pour tous les supports de cours",
                 totalCourses: "Total Cours",
                 categories: "Catégories",
                 totalDownloads: "Téléchargements",
-                adminLogin: "Connexion Admin",
-                password: "Mot de passe",
-                login: "Se connecter",
-                logout: "Déconnexion",
-                uploadNew: "Téléverser Nouveau Matériel",
-                courseTitle: "Titre du Cours",
-                description: "Description",
-                category: "Catégorie",
-                selectCategory: "Sélectionner une catégorie",
-                mathematics: "Mathématiques",
-                science: "Sciences",
-                languages: "Langues",
-                other: "Autre",
-                pdfFile: "Fichier PDF",
-                clickToSelect: "Cliquez pour sélectionner un fichier PDF",
-                addCourse: "Ajouter le Matériel",
-                searchPlaceholder: "🔍 Rechercher des cours...",
-                noCoursesYet: "Pas encore de cours dans cette catégorie",
-                uploadDate: "Date de téléversement",
-                downloadBtn: "Télécharger",
-                deleteConfirm: "Êtes-vous sûr de vouloir supprimer ce cours?",
-                courseAdded: "Matériel de cours ajouté avec succès!",
-                selectFile: "Veuillez sélectionner un fichier PDF",
-                wrongPassword: "Mauvais mot de passe! Veuillez réessayer.",
-                adminMode: "Mode Admin"
+                teacherLink: "Instructions Enseignant - Comment Ajouter des Cours",
+                searchPlaceholder: "🔍 Rechercher...",
+                noCoursesYet: "Pas encore de cours",
+                uploadDate: "Ajouté le",
+                downloadBtn: "📥 Télécharger PDF",
+                cat1: "Atelier Programmation",
+                cat2: "Système Logique et Architecture",
+                cat3: "Algorithme et Structure de Données",
+                cat4: "Logique Formelle",
+                cat5: "Technologies Multimédia",
+                cat6: "Technique de Communication",
+                cat7: "Analyse",
+                cat8: "Algèbre",
+                cat9: "Système d'Exploitation",
+                cat10: "Anglais"
             },
             ar: {
-                siteTitle: "مكتبة دورات الصف 2026",
-                siteSubtitle: "مركز الموارد الشامل لجميع المواد الدراسية",
+                siteTitle: "مكتبة دورات الصف 2025",
                 totalCourses: "إجمالي الدورات",
                 categories: "الفئات",
                 totalDownloads: "التنزيلات",
-                adminLogin: "تسجيل دخول المسؤول",
-                password: "كلمة المرور",
-                login: "تسجيل الدخول",
-                logout: "تسجيل الخروج",
-                uploadNew: "رفع مادة دراسية جديدة",
-                courseTitle: "عنوان الدورة",
-                description: "الوصف",
-                category: "الفئة",
-                selectCategory: "اختر فئة",
-                mathematics: "الرياضيات",
-                science: "العلوم",
-                languages: "اللغات",
-                other: "أخرى",
-                pdfFile: "ملف PDF",
-                clickToSelect: "انقر لاختيار ملف PDF",
-                addCourse: "إضافة المادة",
-                searchPlaceholder: "🔍 ابحث عن الدورات...",
-                noCoursesYet: "لا توجد دورات حتى الآن في هذه الفئة",
+                teacherLink: "تعليمات المعلم - كيفية إضافة الدورات",
+                searchPlaceholder: "🔍 ابحث...",
+                noCoursesYet: "لا توجد دورات بعد",
                 uploadDate: "تاريخ الرفع",
-                downloadBtn: "تحميل",
-                deleteConfirm: "هل أنت متأكد من حذف هذه الدورة؟",
-                courseAdded: "تمت إضافة المادة الدراسية بنجاح!",
-                selectFile: "الرجاء اختيار ملف PDF",
-                wrongPassword: "كلمة مرور خاطئة! حاول مرة أخرى.",
-                adminMode: "وضع المسؤول"
+                downloadBtn: "📥 تحميل PDF",
+                cat1: "ورشة البرمجة",
+                cat2: "الأنظمة المنطقية والبنية",
+                cat3: "الخوارزميات وهياكل البيانات",
+                cat4: "المنطق الرسمي",
+                cat5: "تقنيات الوسائط المتعددة",
+                cat6: "تقنيات الاتصال",
+                cat7: "التحليل",
+                cat8: "الجبر",
+                cat9: "أنظمة التشغيل",
+                cat10: "الإنجليزية"
             }
         };
 
-        // Initialize
-        window.onload = function() {
-            loadData();
-            renderCourses();
-            updateStats();
+        let currentLanguage = 'en';
+        let downloadCount = parseInt(localStorage.getItem('downloadCount') || '0');
+
+        // Category icons
+        const categoryIcons = {
+            programmation: '💻',
+            systeme_logique: '🔧',
+            algorithme: '📊',
+            logique: '🧠',
+            multimedia: '🎨',
+            communication: '📡',
+            analyse: '📐',
+            algebre: '🔢',
+            systeme_exploitation: '⚙️',
+            anglais: '🌍'
         };
 
-        // Load data
-        function loadData() {
-            const savedCourses = localStorage.getItem('courses');
-            const savedDownloads = localStorage.getItem('downloadCount');
-            if (savedCourses) courses = JSON.parse(savedCourses);
-            if (savedDownloads) downloadCount = parseInt(savedDownloads);
-        }
-
-        // Save data
-        function saveData() {
-            localStorage.setItem('courses', JSON.stringify(courses));
-            localStorage.setItem('downloadCount', downloadCount.toString());
-        }
+        // Initialize
+        renderCourses();
+        updateStats();
 
         // Language change
         function changeLanguage(lang) {
             currentLanguage = lang;
             const t = translations[lang];
             
-            // Update all text elements
             document.getElementById('siteTitle').textContent = t.siteTitle;
-            document.getElementById('siteSubtitle').textContent = t.siteSubtitle;
             document.getElementById('labelCourses').textContent = t.totalCourses;
             document.getElementById('labelCategories').textContent = t.categories;
             document.getElementById('labelDownloads').textContent = t.totalDownloads;
-            document.getElementById('adminLoginTitle').textContent = t.adminLogin;
-            document.getElementById('passwordLabel').textContent = t.password;
-            document.getElementById('loginBtn').textContent = t.login;
-            document.getElementById('uploadTitle').textContent = t.uploadNew;
-            document.getElementById('logoutText').textContent = t.logout;
-            document.getElementById('adminModeText').textContent = t.adminMode;
-            document.getElementById('titleLabel').textContent = t.courseTitle + ' *';
-            document.getElementById('descLabel').textContent = t.description;
-            document.getElementById('categoryLabel').textContent = t.category + ' *';
-            document.getElementById('fileLabel').textContent = t.pdfFile + ' *';
-            document.getElementById('addCourseBtn').textContent = t.addCourse;
+            document.getElementById('teacherLink').textContent = t.teacherLink;
             document.getElementById('searchInput').placeholder = t.searchPlaceholder;
-            document.getElementById('mathTitle').textContent = t.mathematics;
-            document.getElementById('scienceTitle').textContent = t.science;
-            document.getElementById('languagesTitle').textContent = t.languages;
-            document.getElementById('otherTitle').textContent = t.other;
             
-            // Update active button
+            for (let i = 1; i <= 10; i++) {
+                document.getElementById('cat' + i).textContent = t['cat' + i];
+            }
+            
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
             
             renderCourses();
         }
 
-        // Handle login
-        function handleLogin() {
-            const password = document.getElementById('passwordInput').value;
-            const t = translations[currentLanguage];
-            
-            if (password === ADMIN_PASSWORD) {
-                isAdmin = true;
-                document.getElementById('loginSection').classList.add('hidden');
-                document.getElementById('uploadSection').classList.remove('hidden');
-                document.getElementById('passwordInput').value = '';
-            } else {
-                alert(t.wrongPassword);
-                document.getElementById('passwordInput').value = '';
-            }
-        }
-
-        // Handle logout
-        function handleLogout() {
-            isAdmin = false;
-            document.getElementById('loginSection').classList.remove('hidden');
-            document.getElementById('uploadSection').classList.add('hidden');
-        }
-
-        // File input handler
-        document.getElementById('fileInput').addEventListener('change', function(e) {
-            selectedFile = e.target.files[0];
-            const fileName = selectedFile ? selectedFile.name : translations[currentLanguage].clickToSelect;
-            document.getElementById('fileName').textContent = fileName;
-        });
-
-        // Handle submit
-        function handleSubmit() {
-            const t = translations[currentLanguage];
-            const title = document.getElementById('courseTitle').value;
-            const description = document.getElementById('courseDescription').value;
-            const category = document.getElementById('courseCategory').value;
-
-            if (!title || !category || !selectedFile) {
-                alert(t.selectFile);
-                return;
-            }
-
-            const course = {
-                id: Date.now(),
-                title: title,
-                description: description,
-                category: category,
-                fileName: selectedFile.name,
-                fileData: URL.createObjectURL(selectedFile),
-                uploadDate: new Date().toLocaleDateString()
-            };
-
-            if (!courses[category]) {
-                courses[category] = [];
-            }
-            courses[category].push(course);
-
-            saveData();
-            renderCourses();
-            updateStats();
-
-            // Reset
-            document.getElementById('courseTitle').value = '';
-            document.getElementById('courseDescription').value = '';
-            document.getElementById('courseCategory').value = '';
-            document.getElementById('fileInput').value = '';
-            document.getElementById('fileName').textContent = t.clickToSelect;
-            selectedFile = null;
-
-            alert(t.courseAdded);
-        }
-
         // Render courses
         function renderCourses() {
             const t = translations[currentLanguage];
-            const categoryIcons = {
-                mathematics: '📐',
-                informatique: '🔬',
-                languages: '🗣️',
-                other: '📖'
-            };
+            const categories = ['programmation', 'systeme_logique', 'algorithme', 'logique', 
+                              'multimedia', 'communication', 'analyse', 'algebre', 
+                              'systeme_exploitation', 'anglais'];
 
-            ['mathematics', 'science', 'languages', 'other'].forEach(category => {
+            categories.forEach(category => {
                 const container = document.getElementById(category);
                 container.innerHTML = '';
 
-                if (!courses[category] || courses[category].length === 0) {
+                const categoryCourses = courses.filter(c => c.category === category);
+
+                if (categoryCourses.length === 0) {
                     container.innerHTML = `
                         <div class="empty-state">
                             <div class="empty-state-icon">📭</div>
@@ -726,23 +568,24 @@
                     return;
                 }
 
-                courses[category].forEach(course => {
+                categoryCourses.forEach(course => {
                     const card = document.createElement('div');
                     card.className = 'course-card';
                     card.dataset.title = course.title.toLowerCase();
                     card.dataset.desc = (course.description || '').toLowerCase();
                     
+                    const date = new Date(course.uploadDate).toLocaleDateString();
+                    
                     card.innerHTML = `
-                        ${isAdmin ? `<button class="delete-btn" onclick="deleteCourse('${category}', ${course.id})">×</button>` : ''}
                         <div class="course-icon">${categoryIcons[category]}</div>
                         <div class="course-title">${course.title}</div>
-                        <div class="course-description">${course.description || 'No description provided'}</div>
+                        <div class="course-description">${course.description}</div>
                         <div class="course-meta">
-                            <span>📅 ${course.uploadDate}</span>
+                            <span>📅 ${date}</span>
                             <span>📄 PDF</span>
                         </div>
-                        <a href="${course.fileData}" download="${course.fileName}" class="download-btn" onclick="incrementDownloads()">
-                            ⬇️ ${t.downloadBtn}
+                        <a href="${course.driveLink}" target="_blank" class="download-btn" onclick="incrementDownloads()">
+                            ${t.downloadBtn}
                         </a>
                     `;
                     container.appendChild(card);
@@ -750,34 +593,16 @@
             });
         }
 
-        // Delete course
-        function deleteCourse(category, courseId) {
-            const t = translations[currentLanguage];
-            if (confirm(t.deleteConfirm)) {
-                courses[category] = courses[category].filter(c => c.id !== courseId);
-                if (courses[category].length === 0) {
-                    delete courses[category];
-                }
-                saveData();
-                renderCourses();
-                updateStats();
-            }
-        }
-
         // Increment downloads
         function incrementDownloads() {
             downloadCount++;
-            saveData();
+            localStorage.setItem('downloadCount', downloadCount.toString());
             updateStats();
         }
 
         // Update stats
         function updateStats() {
-            let totalCourses = 0;
-            Object.values(courses).forEach(cat => {
-                totalCourses += cat.length;
-            });
-            document.getElementById('totalCourses').textContent = totalCourses;
+            document.getElementById('totalCourses').textContent = courses.length;
             document.getElementById('totalDownloads').textContent = downloadCount;
         }
 
@@ -797,6 +622,4 @@
         }
     </script>
 </body>
-
 </html>
-
