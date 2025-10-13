@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="fss.jpg">
     <title>Class 2025 Course Library</title>
     <style>
         * {
@@ -98,27 +97,37 @@
             opacity: 0.9;
         }
 
-        .teacher-link {
-            background: white;
-            padding: 15px 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        .action-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
             margin-bottom: 30px;
-            text-align: center;
+            flex-wrap: wrap;
         }
 
-        .teacher-link a {
-            color: #667eea;
+        .action-link {
+            background: white;
+            padding: 20px 35px;
+            border-radius: 12px;
             text-decoration: none;
+            color: #667eea;
             font-weight: 600;
-            font-size: 1.1em;
-            display: inline-flex;
+            font-size: 1.2em;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .teacher-link a:hover {
-            color: #764ba2;
+        .action-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .action-link.teacher {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
         }
 
         .search-bar {
@@ -240,6 +249,15 @@
             .course-grid {
                 grid-template-columns: 1fr;
             }
+
+            .action-links {
+                flex-direction: column;
+            }
+
+            .action-link {
+                width: 100%;
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -249,7 +267,7 @@
             <div class="header-top">
                 <div>
                     <h1>📚 <span id="siteTitle">Class 2025 Course Library</span></h1>
-                    <p id="siteSubtitle">Computer Science & Mathematics Resources Developped By Aouichaoui Ibrahim</p>
+                    <p id="siteSubtitle">Computer Science & Mathematics Resources</p>
                 </div>
                 <div class="language-selector">
                     <button class="lang-btn active" onclick="changeLanguage('en')">EN</button>
@@ -273,10 +291,13 @@
             </div>
         </header>
 
-        <!-- Teacher Instructions Link -->
-        <div class="teacher-link">
-            <a href="teacher-instructions.html" target="_blank">
-                👨‍🏫 <span id="teacherLink">Teacher Instructions - How to Add Courses</span>
+        <!-- Action Links -->
+        <div class="action-links">
+            <a href="student-request.html" class="action-link">
+                📤 <span id="requestLink">Request Course Upload</span>
+            </a>
+            <a href="teacher-admin.html" class="action-link teacher">
+                👨‍🏫 <span id="teacherLink">Teacher Admin Panel</span>
             </a>
         </div>
 
@@ -342,72 +363,14 @@
         // 📚 COURSES DATABASE - EDIT THIS TO ADD/REMOVE COURSES
         // ========================================
         const courses = [
-            // PROGRAMMATION
-
-            // SYSTÈME LOGIQUE
-            {
-                title: "algebre de boole ",
-                description: "cours algebre de boole mr.naoufel gueddah",
-                category: "systeme_logique",
-                driveLink: "https://drive.google.com/file/d/1VDw8vYM-7jlA74HyDFG8PW1SMZPKfShY/view?usp=sharing",
-                uploadDate: "2025-10-10"
-            },
-            {
-                title: "systeme logique  ",
-                description: "cours systeme logique mme.tounsi lamia",
-                category: "systeme_logique",
-                driveLink: "https://drive.google.com/file/d/1WMjhSOHdVdDqujI-kdztqcJWfVRrDtwd/view?usp=sharing",
-                uploadDate: "2025-10-07"
-            },
-
-            // ALGORITHME
-            {
-                title: "algorithme et structure de données chapitre 3",
-                description: "chapitre 3 by fendri emna ",
-                category: "algorithme",
-                driveLink: "https://drive.google.com/file/d/1rmYNdXcS6N2YxYarb8A6vG4IgUlaPmYA/view?usp=sharing",
-                uploadDate: "2025-10-04"
-            },
-            {
-                title: "algorithme et structure de données chapitre 1 , 2 et 3",
-                description: "chapitre 1,2 et 3  ",
-                category: "algorithme",
-                driveLink: "https://drive.google.com/file/d/1rWBZLtjEarIkpzDcZYGyzIARuqV66cAY/view?usp=sharing",
-                uploadDate: "2025-10-02"
-            },
-
-            // LOGIQUE FORMELLE
-            {
-                title: "logique formelle ",
-                description: "logique formelle ",
-                category: "logique",
-                driveLink: "https://drive.google.com/file/d/1sayHZSePFr26_1qHpcEzJ_rV74KdQmY5/view?usp=sharing",
-                uploadDate: "2025-10-06"
-            },
-
-            // MULTIMEDIA
-            {
-                title: "technologies multimedia TP1",
-                description: "technologies multimedia mme.Faiza charfi",
-                category: "multimedia",
-                driveLink: "https://drive.google.com/file/d/13e5v19g0zWDJG_DQdMVzvSWfQZjWB3HZ/view?usp=sharing",
-                uploadDate: "2025-10-10"
-            },
-
-            // COMMUNICATION
-            
-
-            // ANALYSE
-            
-
-            // ALGÈBRE
-            
-
-            // SYSTÈME D'EXPLOITATION
-            
-
-            // ANGLAIS
-            
+            // Add your courses here following this format:
+            // {
+            //     title: "Course Title",
+            //     description: "Course description",
+            //     category: "category_name",
+            //     driveLink: "https://your-link.com",
+            //     uploadDate: "2025-04-10"
+            // },
         ];
         // ========================================
         // END OF COURSES DATABASE
@@ -420,7 +383,8 @@
                 totalCourses: "Total Courses",
                 categories: "Categories",
                 totalDownloads: "Downloads",
-                teacherLink: "Teacher Instructions - How to Add Courses",
+                requestLink: "Request Course Upload",
+                teacherLink: "Teacher Admin Panel",
                 searchPlaceholder: "🔍 Search courses...",
                 noCoursesYet: "No courses yet in this category",
                 uploadDate: "Uploaded",
@@ -441,7 +405,8 @@
                 totalCourses: "Total Cours",
                 categories: "Catégories",
                 totalDownloads: "Téléchargements",
-                teacherLink: "Instructions Enseignant - Comment Ajouter des Cours",
+                requestLink: "Demander un Ajout de Cours",
+                teacherLink: "Panneau Admin Enseignant",
                 searchPlaceholder: "🔍 Rechercher...",
                 noCoursesYet: "Pas encore de cours",
                 uploadDate: "Ajouté le",
@@ -462,7 +427,8 @@
                 totalCourses: "إجمالي الدورات",
                 categories: "الفئات",
                 totalDownloads: "التنزيلات",
-                teacherLink: "تعليمات المعلم - كيفية إضافة الدورات",
+                requestLink: "طلب إضافة دورة",
+                teacherLink: "لوحة تحكم المعلم",
                 searchPlaceholder: "🔍 ابحث...",
                 noCoursesYet: "لا توجد دورات بعد",
                 uploadDate: "تاريخ الرفع",
@@ -483,7 +449,6 @@
         let currentLanguage = 'en';
         let downloadCount = parseInt(localStorage.getItem('downloadCount') || '0');
 
-        // Category icons
         const categoryIcons = {
             programmation: '💻',
             systeme_logique: '🔧',
@@ -510,6 +475,7 @@
             document.getElementById('labelCourses').textContent = t.totalCourses;
             document.getElementById('labelCategories').textContent = t.categories;
             document.getElementById('labelDownloads').textContent = t.totalDownloads;
+            document.getElementById('requestLink').textContent = t.requestLink;
             document.getElementById('teacherLink').textContent = t.teacherLink;
             document.getElementById('searchInput').placeholder = t.searchPlaceholder;
             
@@ -599,8 +565,8 @@
             });
         }
     </script>
-    <!-- Default Statcounter code for Class 2025 Course Library
-https://lsi1-fss.netlify.app/ -->
+
+    <!-- StatCounter Code -->
     <script type="text/javascript">
     var sc_project=13174642; 
     var sc_invisible=1; 
